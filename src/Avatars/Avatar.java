@@ -22,7 +22,7 @@ public class Avatar {
 	protected Integer color;
 	
 	/**
-	 * Creation du personnage;
+	 * Creation du personnage
 	 * @param size
 	 * @param width
 	 */
