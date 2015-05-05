@@ -12,13 +12,13 @@ import Avatars.multi.Pion;
 
 public class Second extends Initilizer{
 
-	private static int NB_PIONS = 10000;
+	private static int NB_PIONS = 500;
 	
 	public void run() throws InterruptedException{
 		initWorld();
 		
 		for(int i=0 ; i < NB_PIONS ; i++){
-			Avatar pion = new Pion(1, 1, 0, 26, HEIGHWORLD, WIDTHWORLD, WORLD);
+			Avatar pion = new Pion(1, 1, 20, 6, HEIGHWORLD, WIDTHWORLD, WORLD);
 			pion.setColor(pion.getColor());
 			pion.setMatricule(WORLD.addAvatar(pion));
 		}
@@ -53,8 +53,8 @@ public class Second extends Initilizer{
 	protected Integer[][] initData() {
 		Integer[][] labyrinthe = new Integer[HEIGHWORLD][WIDTHWORLD];
 		
-		laby1(labyrinthe);
-		//laby2(labyrinthe);
+		//laby1(labyrinthe);
+		laby2(labyrinthe);
 		
 		return labyrinthe;
 	}
@@ -122,15 +122,64 @@ public class Second extends Initilizer{
 		
 		for(int i = 20 ; i < 61 ; i++){
 			labyrinthe[i][50] = null;
+			labyrinthe[i][35] = null;
+			labyrinthe[i][40] = null;
+			labyrinthe[i][20] = null;
+		}	
+		
+		for(int i = 60 ; i < 97 ; i++){
+			labyrinthe[i][37] = null;
+			labyrinthe[i][56] = null;
 		}	
 		
 		for(int i = 5 ; i < 40 ; i++){
 			labyrinthe[i][20] = null;
 		}	
 		
-		for(int i = 60 ; i < 100 ; i++){
+		for(int i = 40 ; i < 96 ; i++){
+			labyrinthe[i][20] = null;
+		}
+		
+		for(int i = 20 ; i < 30 ; i++){
+			labyrinthe[70][i] = null;
+		}
+		
+		for(int i = 23 ; i < 28; i++){
+			labyrinthe[72][i] = null;
+		}
+		
+		for(int i = 25 ; i < 28; i++){
+			labyrinthe[78][i] = null;
+		}
+		
+		for(int i = 23 ; i < 30 ; i++){
+			labyrinthe[80][i] = null;
+		}
+		
+		for(int i = 70 ; i < 81 ; i++){
+			labyrinthe[i][30] = null;
+		}
+		
+		for(int i = 72 ; i < 81 ; i++){
+			labyrinthe[i][23] = null;
+		}
+		
+		for(int i = 72 ; i < 79 ; i++){
+			labyrinthe[i][28] = null;
+		}
+		
+		for(int i = 20 ; i < 56 ; i++){
+			labyrinthe[96][i] = null;
+		}	
+		
+		for(int i = 60 ; i < 115 ; i++){
 			labyrinthe[i][40] = null;
 		}	
-		labyrinthe[98][40] = 100;
+		
+		for(int i = 30 ; i < 41 ; i++){
+			labyrinthe[115][i] = null;
+		}	
+		
+		labyrinthe[115][30] = 100;
 	}
 }
