@@ -1,14 +1,14 @@
 package tools;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import Avatars.Avatar;
-import Avatars.IConstantsAvatars;
 
 public class World extends JFrame {
 
@@ -29,6 +29,9 @@ public class World extends JFrame {
 		this.width = width;
 	    this.setTitle("Strange world");
 	    this.setSize(windowsWdith, windowHeight);
+	    this.setResizable(false);
+	    setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );        
+        
 	    this.posAvatar = 0;
 	    this.mapAvatarsTri = new HashMap<String, Map<String, Avatar>>();
 	    this.data = initData;

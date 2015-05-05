@@ -6,16 +6,13 @@ import tools.World;
 public class Initilizer {
 	protected static int HEIGHWORLD 	 	=   120; 
 	protected static int WIDTHWORLD 	 	=    58; 
-	protected static int WINDOWHEIGHT 	=   600;
-	protected static int WINDOWSWDITH 	=   1216;
-	protected static int BODYSIZE	 		=     2;
-	protected static int BODYWIDTH	 	=     1;
-	protected static int POSITIONX	 	=    20;
-	protected static int POSITIONY	 	=    53;
+	protected static int WINDOWHEIGHT 		=   600;
+	protected static int WINDOWSWDITH 		=  1206;
+	protected static int FRAME_SPEED 		=    30; 
+
 	protected static int MAP[] = {HEIGHWORLD, WIDTHWORLD};
 	protected static World WORLD = null;  
 	protected static Grid MAP_WORLD = null;  
-	protected int FRAME_SPEED = 30; 
 	
 	protected void initWorld(){
 		// Initialisize Worl		
